@@ -63,5 +63,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-end
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'mongoid', '~> 7.3', '>= 7.3.1'
+gem 'figaro'
+end
