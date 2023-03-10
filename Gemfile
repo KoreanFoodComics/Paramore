@@ -66,4 +66,8 @@ group :test do
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'mongoid', '~> 7.3', '>= 7.3.1'
 gem 'figaro'
+group :production do
+  gem 'dotenv-rails'
+end
+
 end
