@@ -20,6 +20,9 @@ Bundler.require(*Rails.groups)
 
 module TheFuture
   class Application < Rails::Application
+    # Load the environment variables
+    Dotenv::Railtie.load
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
