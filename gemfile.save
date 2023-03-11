@@ -56,13 +56,21 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  gem 'dotenv-rails', groups: [:development, :test]
-  gem 'mongoid', '~> 7.3', '>= 7.3.1'
-  gem 'figaro'
 end
 
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
+gem 'dotenv-rails', groups: [:development, :test]
 group :production do
   gem 'dotenv-rails'
-  gem 'pg'
+end
+group :production do
+  gem 'dotenv-rails'
+end
+
+gem 'mongoid', '~> 7.3', '>= 7.3.1'
+gem 'figaro'
 end
